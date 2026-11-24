@@ -1,0 +1,27 @@
+{
+  "d1-glm-router": {
+    "PreToolUse": [
+      {
+        "matcher": "invoke_subagent|write_to_file|replace_file_content|multi_replace_file_content|run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python ./scripts/pre_tool_router.py"
+          }
+        ]
+      }
+    ],
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python ./scripts/escalation_watcher.py"
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "python ./scripts/escalation_watcher.py"
+      }
+    ]
+  }
+}
