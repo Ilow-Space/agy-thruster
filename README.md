@@ -133,16 +133,23 @@ agy-d1-glm-router/
 
 ## 4. Installation & Setup
 
-### Option A: Local Plugin Directory Installation
-Install directly via `agy`:
+### Install via Antigravity CLI (`agy`)
+Install directly from the GitHub repository:
 ```bash
-agy plugin install /path/to/agy-d1-glm-router
+agy plugin install https://github.com/Ilow-Space/agy-thruster
 ```
+This automatically registers the plugin manifest, lifecycle hooks, worker subagent, delegation rules, orchestration skills, and MCP servers directly into your Antigravity environment (`~/.gemini/config/plugins/agy-d1-glm-router`).
 
-### Option B: Workspace Customization
-Or clone directly into your workspace under `.agents/plugins/`:
+Once installed, enable the plugin and supply your `SILICONFLOW_API_KEY`:
 ```bash
-git clone git@github.com:Ilow-Space/agy-thruster.git .agents/plugins/agy-d1-glm-router
+agy plugin enable agy-d1-glm-router
+```
+*(Or navigate to `/plugin` in the Antigravity settings UI to toggle it on and configure server variables.)*
+
+### Option B: Workspace Customization (Project-Scoped)
+To include the plugin specifically for a single project repository, clone it into your workspace root under `.agents/plugins/`:
+```bash
+git clone https://github.com/Ilow-Space/agy-thruster.git .agents/plugins/agy-d1-glm-router
 ```
 
 ---
