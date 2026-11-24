@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "pi": {
+      "command": "pi-delegate-mcp",
+      "args": [],
+      "env": {
+        "SILICONFLOW_API_KEY": "${SILICONFLOW_API_KEY}"
+      },
+      "variables": [
+        {
+          "name": "SILICONFLOW_API_KEY",
+          "title": "SiliconFlow API Key",
+          "description": "API key for SiliconFlow GLM models"
+        }
+      ]
+    }
+  }
+}

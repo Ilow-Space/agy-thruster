@@ -1,0 +1,8 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "agy-d1-glm-router",
+  "displayName": "D1 GLM Router",
+  "version": "0.1.0",
+  "description": "Decision-routed worker plugin offloading tasks to SiliconFlow GLM models via local Liquid AI d1:3b",
+  "logo": "assets/logo.svg"
+}
